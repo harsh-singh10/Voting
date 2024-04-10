@@ -1,0 +1,43 @@
+VOTING APPLICATION 
+WHAT???
+A functionality where user can give vote to the register candidates
+
+MODELS?/
+
+ROUTES?
+
+
+FUNCTIONALITY??
+1) user can sign in / sign up 
+2) can see the list of candidates
+3) vote one of the candidates . after that user cannot give vote again 
+4) there is route that show the list of candiates and their live voting 
+5) user can have unique id like : adhar no
+6) one admin who maintain the list of the candidates , and he can't able to vote 
+7) user can change the password
+8) user can only login with their adhar-card and password
+
+
+---------------------------------------------
+
+ROUTES
+User Authentication:
+        /signup: POST - Create a new user account.
+        /login: POST - Log in to an existing account.   [adhar no + password]
+
+Voting:
+        /candidates: GET - Get the list of candidates.
+        /vote/:candidateld: POST - Vote for a specific candidate.
+
+Vote Counts:
+        /vote/counts: GET - Get the list of candidates sorted by their vote counts.
+
+User Profile:
+        /profile: GET - Get the user's profile information.
+        /profile/password: PUT - Change the user's password.
+
+Admin Candidate Management:
+        /candidates: POST - Create a new candidate.
+        /candidates/:candidateId: PUT - Update an existing candidate.
+        /candidates/:candidateId: DELETE - Delete a candidate from the list.
+
